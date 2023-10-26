@@ -6,10 +6,10 @@ let store, cache
   store = require('@store/remote-mysql')
   cache = require('@store/remote-cache')
 } else {
-  store = require('@store/mssql')
   cache = require('@store/redis')
 } */
 
+store = require('@store/mssql')
 const ctrl = require('./controller')
 
 module.exports = ctrl(store, cache)
